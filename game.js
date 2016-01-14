@@ -2,38 +2,23 @@ function myFunction() {
 
 var correctAnswer = 0
 
+function rightWrong(question, condition, condition2){
+  var questionX = prompt(question).toUpperCase();
+  if (questionX === condition || questionX === condition2) {
+    correctAnswer++;
+    alert("That's right! You have correctly guessed " + correctAnswer + " out of 5.");
+  } else {
+    alert("Uh oh, that's wrong. You have correctly guessed " + correctAnswer + " out of 5.");
+  }
+}
 // Question One //
-
-var questionOne = prompt("What is my favorite color? Can you guess it?").toUpperCase();
-if (questionOne === "BLUE") {
-  correctAnswer++;
-  alert("That's right! You have correctly guessed " + correctAnswer + " out of 5.");
-} else {
-  alert("Uh oh, that's wrong. You have correctly guessed " + correctAnswer + " out of 5.");
-}
-
+rightWrong("What is my favorite color? Can you guess it?", "BLUE");
 // Question Two //
-
-var questionTwo = prompt("I cannot concentrate. I am thinking of a large, dangerous African mammal for no reason at all. What is it?").toUpperCase();
-if (questionTwo === "HIPPO" || questionTwo === "HIPPOPOTAMUS") {
-  correctAnswer++;
-  alert("That's right! You have correctly guessed " + correctAnswer + " out of 5.");
-} else {
-  alert("Uh oh, that's wrong. You have correctly guessed " + correctAnswer + " out of 5.");
-}
-
+rightWrong("I cannot concentrate. I am thinking of a large, dangerous African mammal for no reason at all. What is it?", "HIPPO", "HIPPOPOTAMUS");
 // Question Three //
-
-var questionThree = prompt("Two of my favorite foods are chocolate and cream. I am thinking of a delicious pastry that uses both chocolate and cream. What is it?").toUpperCase();
-if (questionThree === "ECLAIR") {
-  correctAnswer++;
-  alert("That's right! You have correctly guessed " + correctAnswer + " out of 5.");
-} else {
-  alert("Uh oh, that's wrong. You have correctly guessed " + correctAnswer + " out of 5.");
-}
+rightWrong("Two of my favorite foods are chocolate and cream. I am thinking of a delicious pastry that uses both chocolate and cream. What is it?", "ECLAIR");
 
 // Question Four //
-
 var questionFour = parseInt(prompt("I am thinking of a number between 1 and 10. What is it? Enter a numberical value between 1 and 10."));
 if (questionFour === 5) {
   correctAnswer++;
